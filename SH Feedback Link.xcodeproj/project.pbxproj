@@ -13,6 +13,7 @@
 		4B826E1F20890EEC00697016 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B826E1E20890EEC00697016 /* Assets.xcassets */; };
 		4B826E2220890EEC00697016 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B826E2020890EEC00697016 /* LaunchScreen.storyboard */; };
 		4B826E2A208914EF00697016 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B826E29208914EF00697016 /* UIViewExtensions.swift */; };
+		4B826E2E20895F2800697016 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B826E2D20895F2800697016 /* WebViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		4B826E2120890EEC00697016 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4B826E2320890EEC00697016 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4B826E29208914EF00697016 /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
+		4B826E2D20895F2800697016 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,12 +58,13 @@
 		4B826E1620890EEB00697016 /* SH Feedback Link */ = {
 			isa = PBXGroup;
 			children = (
-				4B826E29208914EF00697016 /* UIViewExtensions.swift */,
-				4B826E1720890EEB00697016 /* AppDelegate.swift */,
-				4B826E1920890EEB00697016 /* ViewController.swift */,
 				4B826E1B20890EEB00697016 /* Main.storyboard */,
-				4B826E1E20890EEC00697016 /* Assets.xcassets */,
 				4B826E2020890EEC00697016 /* LaunchScreen.storyboard */,
+				4B826E1920890EEB00697016 /* ViewController.swift */,
+				4B826E2D20895F2800697016 /* WebViewController.swift */,
+				4B826E1720890EEB00697016 /* AppDelegate.swift */,
+				4B826E29208914EF00697016 /* UIViewExtensions.swift */,
+				4B826E1E20890EEC00697016 /* Assets.xcassets */,
 				4B826E2320890EEC00697016 /* Info.plist */,
 			);
 			path = "SH Feedback Link";
@@ -141,6 +144,7 @@
 				4B826E1A20890EEB00697016 /* ViewController.swift in Sources */,
 				4B826E2A208914EF00697016 /* UIViewExtensions.swift in Sources */,
 				4B826E1820890EEB00697016 /* AppDelegate.swift in Sources */,
+				4B826E2E20895F2800697016 /* WebViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

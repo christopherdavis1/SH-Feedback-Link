@@ -111,11 +111,98 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="feedbackButtonContiner" destination="Zrp-3H-HVn" id="MZM-TM-TZz"/>
+                        <segue destination="JNG-vA-AIx" kind="presentation" identifier="feedbackView" id="vVj-lc-8rL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="871" y="134"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="hj4-lo-KGq">
+            <objects>
+                <navigationController toolbarHidden="NO" id="JNG-vA-AIx" sceneMemberID="viewController">
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="gdY-OI-223">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="kPY-RN-SWo">
+                        <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="enq-Iv-GRU" kind="relationship" relationship="rootViewController" id="EW7-a4-F4E"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3L0-wX-ScF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1662" y="-591"/>
+        </scene>
+        <!--Web View Controller-->
+        <scene sceneID="Oho-ar-FAQ">
+            <objects>
+                <viewController id="enq-Iv-GRU" customClass="WebViewController" customModule="SH_Feedback_Link" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wWi-1H-ewg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YLt-j2-yrv">
+                                <rect key="frame" x="0.0" y="64" width="375" height="559"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="YLt-j2-yrv" firstAttribute="bottom" secondItem="yeO-AY-Beb" secondAttribute="bottom" id="FRg-cE-VPF"/>
+                            <constraint firstItem="YLt-j2-yrv" firstAttribute="top" secondItem="yeO-AY-Beb" secondAttribute="top" id="JbV-yo-RGE"/>
+                            <constraint firstItem="YLt-j2-yrv" firstAttribute="leading" secondItem="yeO-AY-Beb" secondAttribute="leading" id="TZp-ko-dqB"/>
+                            <constraint firstItem="YLt-j2-yrv" firstAttribute="trailing" secondItem="yeO-AY-Beb" secondAttribute="trailing" id="tNV-O0-38f"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="yeO-AY-Beb"/>
+                    </view>
+                    <toolbarItems>
+                        <barButtonItem title="Back" image="leftIcon" id="ugr-KU-niW">
+                            <color key="tintColor" red="0.0" green="0.47450980390000003" blue="0.74901960779999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="goBack:" destination="enq-Iv-GRU" id="xkc-L7-vgc"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="uSg-3P-sDd"/>
+                        <barButtonItem title="Forward" image="rightIcon" id="pEU-KB-VSx">
+                            <color key="tintColor" red="0.0" green="0.47450980390000003" blue="0.74901960779999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="goForward:" destination="enq-Iv-GRU" id="pdI-w8-sdh"/>
+                            </connections>
+                        </barButtonItem>
+                    </toolbarItems>
+                    <navigationItem key="navigationItem" id="tT5-7G-DNv">
+                        <barButtonItem key="leftBarButtonItem" title="Done" id="otZ-kT-Cia">
+                            <color key="tintColor" red="0.0" green="0.47450980390000003" blue="0.74901960779999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="doneButtonTapped:" destination="enq-Iv-GRU" id="v5u-Kk-wdr"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Refresh" image="refreshIcon" id="nxU-ns-a4n">
+                            <color key="tintColor" red="0.0" green="0.47450980390000003" blue="0.74901960779999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="refresh:" destination="enq-Iv-GRU" id="8nn-HZ-vt7"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="webView" destination="YLt-j2-yrv" id="5tF-MO-1Ea"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VrE-Z5-IWh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1661.5999999999999" y="133.5832083958021"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="IIN-1p-J6H">
@@ -123,6 +210,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="HyM-P6-9bj" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="l9u-ma-BRs">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -138,5 +226,8 @@
     <resources>
         <image name="activity" width="22" height="21"/>
         <image name="feedbackIcon" width="30" height="28"/>
+        <image name="leftIcon" width="24" height="24"/>
+        <image name="refreshIcon" width="24" height="24"/>
+        <image name="rightIcon" width="24" height="24"/>
     </resources>
 </document>
