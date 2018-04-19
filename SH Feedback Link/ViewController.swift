@@ -13,8 +13,11 @@ class ViewController: UIViewController {
     // Outlets
     @IBOutlet weak var feedbackButtonContiner: UIView!
     
+    
     // Actions
-    @IBAction func feedbackButton(_ sender: Any) {}
+    @IBAction func feedbackButton(_ sender: Any) {
+        performSegue(withIdentifier: "feedbackView", sender: "https://www.trello.com")
+    }
     
     
     override func viewDidLoad() {
