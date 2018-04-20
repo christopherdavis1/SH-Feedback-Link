@@ -13,7 +13,6 @@ class WebViewController: UIViewController {
 
     // MARK: - Outlets
     @IBOutlet weak var webView: WKWebView!
-    var urlString: String!
     
     
     // MARK: - Actions
@@ -31,28 +30,40 @@ class WebViewController: UIViewController {
     }
     
     
+    // Mark: - Variables
+    var urlString: String!
+    
     
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
+        // Pass in the sender as urlString to create and use the URL
         let url = URL(string: urlString)!
         let request = URLRequest(url: url)
         webView.load(request)
         
+        // Create an observer to watch for loading status
         webView.addObserver(self, forKeyPath: #keyPath(WKWebView.estimatedProgress), options: .new, context: nil)
     }
     
     deinit {
+        // Get rid of the observer if we exit the view.
         webView.removeObserver(self, forKeyPath: #keyPath(WKWebView.estimatedProgress))
     }
     
-    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
     
+    
+    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+        
         if keyPath == "estimatedProgress" {
+            
+            // If the web page has loaded...show the page title.
             if webView.estimatedProgress == 1.0 {
                 navigationItem.title = webView.title
-            } else {
+            }
+            // Else, show a loading indicator for the title.
+            else {
                 navigationItem.title = "Loading..."
             }
         }

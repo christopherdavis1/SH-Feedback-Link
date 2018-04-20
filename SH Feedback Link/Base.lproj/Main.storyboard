@@ -29,7 +29,7 @@
                                                 <color key="tintColor" red="0.71372549019607845" green="0.73333333333333328" blue="0.74901960784313726" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <state key="normal" image="feedbackIcon"/>
                                                 <connections>
-                                                    <action selector="feedbackButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iR9-Yt-emk"/>
+                                                    <action selector="feedBackButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WzQ-xe-fjr"/>
                                                 </connections>
                                             </button>
                                         </subviews>
